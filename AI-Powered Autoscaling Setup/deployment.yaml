@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scaling-model-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scaling-model
+  template:
+    metadata:
+      labels:
+        app: scaling-model
+    spec:
+      containers:
+        - name: scaling-model
+          image: dilliramshah4/scaling-model:v3
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          env:
+            - name: FLASK_ENV
+              value: "production"

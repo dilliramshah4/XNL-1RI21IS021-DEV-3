@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockchain-logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blockchain-logger
+  template:
+    metadata:
+      labels:
+        app: blockchain-logger
+    spec:
+      containers:
+        - name: blockchain-logger
+          image: dilliramshah4/blockchain-logger
+          env:
+            - name: GANACHE_RPC_URL
+              value: "http://ganache:8545"
+            - name: GANACHE_PRIVATE_KEY
+              value: "0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"
