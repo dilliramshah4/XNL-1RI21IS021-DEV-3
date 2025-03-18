@@ -1,4 +1,4 @@
-# AI-Powered Multi-Cloud Kubernetes Cluster with Automated CI/CD & Monitoring
+# KUBERNETES CLUSTER & BLOCKCHAIN-BASED SYSTEM
 
 
 # K3d Cluster Setup Documentation
@@ -352,4 +352,11 @@ Click Import
 To monitor node-level CPU, memory, and disk usage, install node-exporter:
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/prometheus/node_exporter/master/examples/kubernetes/node-exporter-daemonset.yaml
+
+
+
+
+## Video Guide
+For a detailed video guide, please refer to the following link:
+[Video Guide](https://drive.google.com/file/d/10RiDsMAuUJbJDAYytMgSY7Hz7M_JrZ12/view?usp=sharing)
 ```
