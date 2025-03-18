@@ -352,6 +352,7 @@ Click Import
 To monitor node-level CPU, memory, and disk usage, install node-exporter:
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/prometheus/node_exporter/master/examples/kubernetes/node-exporter-daemonset.yaml
+```
 
 
 
